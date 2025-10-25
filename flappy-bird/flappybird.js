@@ -57,6 +57,12 @@ window.onload = function() {
     topPipeImg = new Image();
     topPipeImg.src = "./toppipe.png";
 
+    doublePipe1Img = new Image();
+    doublePipe1Img.src = "./doublepipe1.png";
+
+    doublePipe2Img = new Image();
+    doublePipe2Img.src = "./doublepipe2.png";
+
     bottomPipeImg = new Image();
     bottomPipeImg.src = "./bottompipe.png";
 
@@ -89,7 +95,9 @@ function update() {
         context.drawImage(pipe.img, pipe.x, pipe.y, pipe.width, pipe.height);
 
         if (!pipe.passed && bird.x > pipe.x + pipe.width) {
-            score += 0.5; //0.5 because there are 2 pipes! so 0.5*2 = 1, 1 for each set of pipes
+            if (pipe.img === bottomPipeImg) {
+                score += 1;
+            }
             pipe.passed = true;
         }
 
@@ -121,8 +129,10 @@ function placePipes() {
     //(0-1) * pipeHeight/2
     // 0 -> 128 (pipeHeight/4)
     // 1 -> -128 - 256 (pipeHeight/4 - pipeHeight/2) = -3/4 pipeHeight
-    let randomPipeY = pipeY - pipeHeight/4 - Math.random()*(pipeHeight/2);
-    let openingSpace = board.height/4;
+    const openingSpace = 135; // vertical gap between each pipe segment
+    const doublePipe1Height = 612 * (pipeWidth / 384); // maintain aspect ratio
+    const doublePipe2Height = 612 * (pipeWidth / 384);
+    const randomPipeY = pipeY - 500; // keeps all pipes fixed at same height
 
     let topPipe = {
         img : topPipeImg,
@@ -135,10 +145,30 @@ function placePipes() {
 
     pipeArray.push(topPipe);
 
+    let doublePipe1 = {
+        img: doublePipe1Img,
+        x: pipeX,
+        y: topPipe.y + topPipe.height + openingSpace,
+        width: pipeWidth,
+        height: doublePipe1Height,
+        passed: false
+    };
+    pipeArray.push(doublePipe1);
+
+    let doublePipe2 = {
+        img: doublePipe2Img,
+        x: pipeX,
+        y: doublePipe1.y + doublePipe1.height + openingSpace,
+        width: pipeWidth,
+        height: doublePipe2Height,
+        passed: false
+    };
+    pipeArray.push(doublePipe2);
+
     let bottomPipe = {
         img : bottomPipeImg,
         x : pipeX,
-        y : randomPipeY + pipeHeight + openingSpace,
+        y : doublePipe2.y + doublePipe2.height + openingSpace,
         width : pipeWidth,
         height : pipeHeight,
         passed : false
@@ -149,7 +179,7 @@ function placePipes() {
 function moveBird(e) {
     if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
         //jump
-        velocityY = -5;
+        velocityY = -4.5;
 
         if (gameOver) {
             bird.y = birdY;
