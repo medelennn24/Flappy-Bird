@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Flappy Quiz Menu</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script src="static/js/menu.js" defer></script>
-  </head>
-  <body>
-    <img src="flappycatlogo.png" id="flappyCatLogo" />
-
-    <button onclick="goToQuestions()" id="questionButton"></button>
-    <button onclick="startGame()" id="playButton"></button>
-  </body>
+ <head>
+   <meta charset="UTF-8" />
+   <title>Flappy Quiz Menu</title>
+   <link rel="stylesheet" href="./style.css" />
+   <script src="./menu.js" defer></script>
+ </head>
+ <body>
+   <img src="flappycatlogo.png" id="flappyCatLogo" />
+   <a href="../Select-screen/select.html">
+     <button onclick="goToQuestions()" id="questionButton"></button>
+   </a>
+   <a href="../flappy-bird/index.html">
+     <button onclick="startGame()" id="playButton"></button>
+   </a>
+ </body>
 </html>
