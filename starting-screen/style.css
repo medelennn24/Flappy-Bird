@@ -1,0 +1,37 @@
+body {
+  background-image: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#flappyCatLogo {
+  display: block;
+  margin: 150px auto 20px auto;
+  width: 700px;
+}
+
+#questionButton {
+  background-image: url("question-button.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 110px;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+#playButton {
+  background-image: url("play-button.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 110px;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
