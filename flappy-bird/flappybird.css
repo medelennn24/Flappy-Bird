@@ -6,5 +6,5 @@ body {
 #board {
     margin-top: 70px;
     /*background-color: skyblue */
-    background-image: url("./flappy-background.png");
+    background-image: url("./Assets/Images/flappy-background.png");
 }

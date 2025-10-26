@@ -49,22 +49,22 @@ window.onload = function() {
 
     //load images
     birdImg = new Image();
-    birdImg.src = "flappybird.png";
+    birdImg.src = "./Assets/Images/flappybird.png";
     birdImg.onload = function() {
         context.drawImage(birdImg, bird.x, bird.y, bird.width, bird.height);
     }
 
     topPipeImg = new Image();
-    topPipeImg.src = "./toppipe.png";
+    topPipeImg.src = "./Assets/Images/toppipe.png";
 
     doublePipe1Img = new Image();
-    doublePipe1Img.src = "./doublepipe1.png";
+    doublePipe1Img.src = "./Assets/Images/doublepipe1.png";
 
     doublePipe2Img = new Image();
-    doublePipe2Img.src = "./doublepipe2.png";
+    doublePipe2Img.src = "./Assets/Images/doublepipe2.png";
 
     bottomPipeImg = new Image();
-    bottomPipeImg.src = "./bottompipe.png";
+    bottomPipeImg.src = "./Assets/Images/bottompipe.png";
 
     requestAnimationFrame(update);
     setInterval(placePipes, 2500); //every 1.5 seconds
