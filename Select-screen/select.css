@@ -19,7 +19,7 @@ h2 {
     text-align: center;
     font-family: 'Arial', sans-serif;
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 #newSetName {
@@ -42,4 +42,32 @@ button {
     background-color: darkorange;
     color: black;
     cursor: pointer;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px auto;
+  width: 300px;
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.9);
+}
+
+#setList {
+    color: orange;
+    list-style-type: none;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    padding: 0;
+}
+
+#setList li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.create {
+    display: flex;
+    justify-content: center;
 }
