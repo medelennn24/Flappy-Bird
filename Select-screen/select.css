@@ -6,6 +6,24 @@ body {
     background-attachment: fixed;
 }
 
+#backButton {
+ position: relative;
+ top: 20px;
+ left: 20px;
+ width: 150px;
+ height: 40px;
+ background-color: darkorange;
+ color: black;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer;
+ font-size: 16px;
+ margin: 0;
+ display: inline-block;
+ z-index: 10;
+}
+
+
 h1 {
     color: white;
     text-align: center;

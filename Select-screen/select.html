@@ -8,6 +8,7 @@
     <script src="./select.js" defer></script>
 </head>
 <body>
+       <button onclick="history.back()" id="backButton">Back To Menu</button>
     <h1>Manage Question Sets</h1>
 
     <h2>Create New Set</h2>
@@ -22,6 +23,8 @@
         <select id="setSelect"></select>
         <input id="questionInput" placeholder="Enter question">
         <input id="answerInput" placeholder="Enter answer">
+        <input id="wrong1Input" placeholder="Wrong answer 1">
+        <input id="wrong2Input" placeholder="Wrong answer 2">
     </div>
     <button onclick="addQuestion()">Add Question</button>
     
@@ -29,6 +32,5 @@
     <h2>Cards in Selected Set</h2>
     <div id="cardsContainer"></div>
 
-    <button onclick="goBack()">Back to Menu</button>
 </body>
 </html>
