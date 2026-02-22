@@ -1,2 +1,5 @@
 # Flappy-Bird
 OCC Spookathon Project
+People can choose to upload their own healthcare related question set or play with an existing one, which appear during gameplay. Each wrong answer makes the game harder, encouraging both focus and active learning through repetition. The game blends fun mechanics with healthcare education, this helps people learn general healthcare tips/ facts so they can be mindful of it and apply it to their daily lives. After selecting a question set, they navigate a spooky flying cat through pipe gaps representing multiple-choice answers. Flying through the correct gap scores points, while too many wrong choices trigger a game over. The game blends rewards repetition and reflexes to make learning these habits/ facts dynamic and memorable.
+We used HTML, CSS, and JavaScript for the frontend, and handling any data with Supabase for the back end. We created separate pages for the menu, question sets, and gameplay. Questions are dynamically loaded from the user-selected sets, and the game tracks correct and incorrect answers to manage scoring and game-over conditions.
+
